@@ -4,7 +4,7 @@ import musicAPI from '../services/index';
 export default function Main() {
 
   async function requestAPI() {
-    const result = await musicAPI('jack johnson')
+    const result = await musicAPI('jackjohnson')
     return result;
   }
 
