@@ -1,6 +1,10 @@
 
 export default async function requestAPI(artist) {
-    const request = await fetch(`https://itunes.apple.com/search?term=${artist}`);
-    const response = await request.json();
-    return response.results;
+    try {
+        const { results } = await fetch(`https://itunes.apple.com/search?term=${artist}`).then((res) => res.json())
+        return results;
+    }
+    catch(e) {
+        global.alert('Not found, try again!');
+    }
 }

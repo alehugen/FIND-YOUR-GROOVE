@@ -1,9 +1,14 @@
 import PropTypes from "prop-types"
-import React from "react";
+import React, { useState } from "react";
 import MusicContext from '../context/MusicContext';
 
 function Provider({ children }) {
-  const contextValue = {};
+  const [musics, setMusics] = useState([]);
+
+  const contextValue = {
+    musics,
+    setMusics,
+  };
 
   return(
       <MusicContext.Provider value={ contextValue }>
