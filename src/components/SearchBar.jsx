@@ -15,10 +15,6 @@ export default function Main() {
     setArtist(value);
   }
 
-  function handleClick() {
-    requestAPI();
-  }
-
   return(
     <div>
       <label htmlFor='search'>
@@ -31,7 +27,7 @@ export default function Main() {
       </label>
       <button 
       type='button'
-      onClick={ handleClick }
+      onClick={ () => requestAPI() }
       >
         FIND PREVIEWS
       </button>
