@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import MusicContext from '../context/MusicContext';
 import musicAPI from '../services/index';
 
 export default function Main() {
   const [artist, setArtist] = useState('');
+  const { musics, setMusics } = useContext(MusicContext);
 
   async function requestAPI() {
-    const result = await musicAPI('micheal jackson')
-    return result;
+    const response = await musicAPI(artist);
+    setMusics(response);
   }
 
   function handleChange({ target: { value }}) {
@@ -14,7 +16,7 @@ export default function Main() {
   }
 
   function handleClick() {
-    console.log(requestAPI());
+    requestAPI();
   }
 
   return(
