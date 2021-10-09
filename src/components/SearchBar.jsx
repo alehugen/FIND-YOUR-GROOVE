@@ -4,11 +4,12 @@ import musicAPI from '../services/index';
 
 export default function SearchBar() {
   const [artist, setArtist] = useState('');
-  const { setMusics } = useContext(MusicContext);
+  const { setMusics, setCatRender } = useContext(MusicContext);
 
   async function handleClick() {
     const response = await musicAPI(artist);
     setMusics(response);
+    if (artist !== '') setCatRender(false);
   }
 
   function handleChange({ target: { value }}) {
