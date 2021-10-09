@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(16, 129, 133);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-box {
+  background-color: black;
+  border-bottom: whitesmoke solid 5px;
+  box-shadow: 3px 5px 20px 0.5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: monospace;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+.header-box h3 {
+ margin-top: -15px;
+ color: rgba(245, 245, 245, 0.5);
+}
+
+.search-bar-box {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.search-bar-box button {
+ margin-left: 120px;
+ padding: 5px;
+ border-radius: 3px;
+ background-color: yellow;
+ box-shadow: 5px 5px 15px 2px;
+ font-family: monospace;
+ font-weight: bolder;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  font-size: xx-large;
+}
+
+.table-head-box .clear-button  {
+  display: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  box-shadow: 5px 5px 15px 2px;
+  font-family: monospace;
+  font-weight: bolder;
+ }
+
+.search-bar-box input {
+  padding: 15px;
+  width: 150%;
+  background-color: black;
   color: white;
+  font-family: monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.table-box {
+  width: 100%;
+  padding: 1%;
+  font-family: monospace;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-head-box {
+  visibility: hidden;
+  padding: 15px;
+  font-size: xx-large;
+}
+
+tbody {
+  border: blue solid 3px;
+}
+
+audio {
+  background-color: yellow;
+  border-radius: 5px;
+  box-shadow:  black 5px 5px 10px 2px;
+}
+
+.cat-dancing {
+  display: block;
+  margin-left: 700px;
+  margin-top: 60px;
+  width: 25%;
+}
+
+.footer-box {
+  background-color: black;
+  border-top: whitesmoke solid 5px;
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 3px 5px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+a {
+  color: whitesmoke;
 }
