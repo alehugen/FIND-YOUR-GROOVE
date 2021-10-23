@@ -2,13 +2,14 @@ import React, { useContext, useState } from "react";
 import MusicContext from '../context/MusicContext';
 import musicAPI from '../services/index';
 
-export default function Main() {
+export default function SearchBar() {
   const [artist, setArtist] = useState('');
-  const { musics, setMusics } = useContext(MusicContext);
+  const { setMusics, setCatRender } = useContext(MusicContext);
 
-  async function requestAPI() {
+  async function handleClick() {
     const response = await musicAPI(artist);
     setMusics(response);
+    if (artist !== '') setCatRender(false);
   }
 
   function handleChange({ target: { value }}) {
@@ -16,18 +17,18 @@ export default function Main() {
   }
 
   return(
-    <div>
+    <div className="search-bar-box">
       <label htmlFor='search'>
         <input 
           type='text' 
           id='search'
-          placeholder='type the artist name'
+          placeholder='type the artist name or music name'
           onChange= { handleChange }
         />
       </label>
       <button 
       type='button'
-      onClick={ () => requestAPI() }
+      onClick={ () => handleClick() }
       >
         FIND PREVIEWS
       </button>

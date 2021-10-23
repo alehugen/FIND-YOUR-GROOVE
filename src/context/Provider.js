@@ -4,10 +4,13 @@ import MusicContext from '../context/MusicContext';
 
 function Provider({ children }) {
   const [musics, setMusics] = useState([]);
+  const [catRender, setCatRender] = useState(true);
 
   const contextValue = {
     musics,
     setMusics,
+    catRender,
+    setCatRender,
   };
 
   return(
