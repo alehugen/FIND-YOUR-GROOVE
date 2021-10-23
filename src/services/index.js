@@ -5,6 +5,6 @@ export default async function requestAPI(artist) {
         return results;
     }
     catch(e) {
-        global.alert('Not found, try again!');
+        global.alert('Could`t find this one, try another!');
     }
 }

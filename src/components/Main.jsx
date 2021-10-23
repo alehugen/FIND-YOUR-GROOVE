@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import MusicContext from "../context/MusicContext";
+import Loading from "./Loading";
 
 export default function Main() {
     const { musics, setMusics, setCatRender } = useContext(MusicContext);
@@ -45,7 +46,7 @@ export default function Main() {
              <track kind="captions"/>
             </audio>
             </tbody>
-          )) : null
+          )) : <Loading />
         }   
     </table>
  );

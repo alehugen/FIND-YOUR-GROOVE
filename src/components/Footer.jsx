@@ -8,7 +8,7 @@ export default function Footer() {
       <a href="https://www.linkedin.com/in/alehugen/" target="_blank" rel="noreferrer">
       <img src={ linkeDin } alt="icone linkedin" />
       </a>
-      <p>Developer by Alessandro Hugen</p>
+      <p>Developed by Alessandro Hugen</p>
       <a href="https://github.com/alehugen" target="_blank" rel="noreferrer">
       <img src={ gitHub } alt="icone github" className='gh' />
       </a>
