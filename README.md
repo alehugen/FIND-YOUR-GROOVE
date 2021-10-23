@@ -1,4 +1,4 @@
-# music-app
+# FIND YOUR GROOVE
 Music App with iTunes API
 
 
