@@ -64,7 +64,7 @@ body {
 
 .table-box {
   width: 100%;
-  padding: 1%;
+  padding: 5%;
   font-family: monospace;
   color: whitesmoke;
   font-weight: bolder;
@@ -72,14 +72,14 @@ body {
   text-align: center;
 }
 
+.table-box img {
+  border-radius: 5px;
+}
+
 .table-head-box {
   visibility: hidden;
   padding: 15px;
   font-size: xx-large;
-}
-
-tbody {
-  border: blue solid 3px;
 }
 
 audio {
@@ -99,17 +99,40 @@ audio {
   background-color: black;
   border-top: whitesmoke solid 5px;
   bottom: 0px;
-  position: fixed;
-  width: 100%;
   box-shadow: 3px 5px 20px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: monospace;
   color: whitesmoke;
+  display: flex;
+  justify-content: center;
   padding: 10px;
+  padding-bottom: 2em;
+  position: fixed;
+  flex-direction: row;
+  font-family: monospace;
+  text-align: center;
+  width: 100%;
 }
 
-a {
+.footer-box p {
   color: whitesmoke;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: -2em;
+}
+
+.footer-box img {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  height: 2.5em;
+  justify-content: center;
+  margin-top: 1.5em;
+  margin-left: 3em;
+}
+
+.footer-box .gh {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+  height: 4em;
 }
